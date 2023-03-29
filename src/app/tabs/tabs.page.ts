@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-
+import { Component,OnInit } from '@angular/core';
+import { Bookdata } from '../../app/Bookdata';
+import { GetBookService } from '../getBookdata.service';
 @Component({
   selector: 'app-tabs',
   templateUrl: 'tabs.page.html',
@@ -7,6 +8,12 @@ import { Component } from '@angular/core';
 })
 export class TabsPage {
 
-  constructor() {}
+  myBook! : Bookdata[]
+  constructor(private ldData: GetBookService) {}
 
+  ngOnInit() {     
+  }
+  refresh(){
+    //this.myBook=this.ldData.loadData()  
+  }
 }

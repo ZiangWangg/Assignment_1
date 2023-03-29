@@ -1,17 +1,40 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      Book Collections
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+<ion-content [fullscreen]="true" >
+  <app-c1></app-c1>
+  
+  <ion-button  (click)='clearBook()' >Clear Books</ion-button><br>
+  <ion-button  (click)='loadBooks()' >Load Books</ion-button>
+  <ion-item>
+    <ion-label  color="primary">  Name:</ion-label>
+    <ion-input type="text" [(ngModel)]="name" ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label  color="primary">Description:</ion-label>
+    <ion-input type="text" [(ngModel)]="description"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label  color="primary">  Author:</ion-label>
+    <ion-input type="text" [(ngModel)]="author"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label  color="primary">Year:</ion-label>
+    <ion-input type="text" [(ngModel)]="year"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label  color="primary">Publisher:</ion-label>
+    <ion-input type="text" [(ngModel)]="publisher" ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label  color="primary">Comments:</ion-label>
+    <ion-input type="text" [(ngModel)]="comments" ></ion-input>
+  </ion-item> 
+  <ion-button (click)='addBook()' >Add Book</ion-button>
+  <ion-label position="floating" color="primary" >Your total books: {{total}}</ion-label>
 </ion-content>

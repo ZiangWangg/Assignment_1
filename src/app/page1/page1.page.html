@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="Back" icon="caret-back"></ion-back-button>
+    </ion-buttons>
+    <ion-title>page1</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating" color="primary">  Name:</ion-label>
+    <ion-input type="text" [(ngModel)]="namep1" ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating" color="primary">Description:</ion-label>
+    <ion-input type="text" [(ngModel)]="descriptionp1"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating" color="primary">  Author:</ion-label>
+    <ion-input type="text" [(ngModel)]="authorp1"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating" color="primary">Year:</ion-label>
+    <ion-input type="text" [(ngModel)]="yearp1"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating" color="primary">Publisher:</ion-label>
+    <ion-input type="text" [(ngModel)]="publisherp1" ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating" color="primary">Comments:</ion-label>
+    <ion-input type="text" [(ngModel)]="commentsp1" ></ion-input>
+  </ion-item> 
+  <ion-button (click)='updateBook()' >Update Book</ion-button>
+  <ion-button (click)='deleteBook()' >Delete Book</ion-button>
+ 
+  
+  
+ 
+</ion-content>

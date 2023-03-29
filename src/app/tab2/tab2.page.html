@@ -1,17 +1,16 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 2
+      Book List
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+   
+    <div *ngFor="let item of myBook" >
+      <ion-button type="button" expand="block" color="secondary" [routerLink]="['/page1']" [state]="{id:item.Name}" > {{item.Name}} / {{item.author}}</ion-button>
+    </div>
+    <ion-label position="floating" color="primary" >Your total books: {{total}}</ion-label>
+    <ion-button (click)='refresh()' >Refresh Books</ion-button>
 </ion-content>
